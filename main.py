@@ -20,9 +20,11 @@ def sort_and_filter(func):
 
         if filter_by_genre:
             films_copy = [film for film in films_copy if filter_by_genre.lower() in film.get("genre", "").lower()]
-
+        
         if filter_by_release_year:
             films_copy = [film for film in films_copy if film.get("release_year") == int(filter_by_release_year)]
+            print(films_copy)
+
 
         if sort_fields:
             for sort_field in sort_fields:
